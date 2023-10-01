@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'font-family: 'Roboto Slab', serif;'
+    font-family: 'font-family: 'Roboto Slab', serif';
+    background-color: #1C1B1E;
+    color: #F4EDE8;
+}
+
+body, input, button, textarea {
+    font-size: 16px;
+    outline: none;
+}
+h1 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, a {
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+button:hover, a:hover {
+    filter: brightness(0.9);
 }
