@@ -2,7 +2,8 @@ import { Input } from "../Input";
 
 
 export function Header() {
-    function sair() {
+    function sair(event) {
+         event.stopPropagation()
         console.log("sair")
     }
     function profile() {
@@ -10,7 +11,7 @@ export function Header() {
     }
     return (
         <header
-            className="grid-area:header h-28 w-full border-b border-solid border-graymedium flex justify-between items-center px-32 "
+            className="grid-area:header h-28 w-full border-b-2 border-solid border-notesBackgroundColor flex justify-between items-center px-32 "
         >
             <h1 className="text-2xl text-pinklight">Rocket Movies</h1>
             <div className="w-1/2">
