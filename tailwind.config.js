@@ -11,7 +11,8 @@ export default {
         inputColor: "#262529",
         backgroundColor: "#1C1B1E",
         baseMarker: "#0D0C0F",
-        notesBackgroundColor: "#312E38"
+        notesBackgroundColor: "#312E38",
+        grayNotes: "#262529"
       }
     },
   },
