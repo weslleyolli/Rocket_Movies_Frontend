@@ -26,7 +26,7 @@ export function Header() {
                     className="flex flex-col mr-4 leading-6"
                 >
                     <a href="#" onClick={profile} className="text-sm text-white font-bold">Weslley Oliveira</a>
-                    <a href="#" onClick={sair} className="text-sm text-graymedium">Exit</a>
+                    <a href="#" onClick={sair} className="text-sm text-graymedium text-right">Exit</a>
                 </div>
                 <a href="#" onClick={profile}><img
                     src="https://github.com/weslleyolli.png"
