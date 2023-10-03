@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "./styles/global.css"
-import { NewMovie } from './pages/NewMovie'
+import { Details } from './pages/Details'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <NewMovie />
+    <Details />
   </React.StrictMode>,
 )
