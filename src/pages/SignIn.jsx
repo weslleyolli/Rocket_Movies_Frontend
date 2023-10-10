@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import backGroundImage from '../assets/backgroundImage.png'
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
@@ -30,9 +31,10 @@ export function SignIn() {
         <Button type="button"
           title="Enter"
         />
-        <a
+        <Link
+          to="/register"
           className="mt-32 text-pinklight"
-        >Create Account</a>
+        >Create Account</Link>
       </form>
       <img
         src={backGroundImage}
