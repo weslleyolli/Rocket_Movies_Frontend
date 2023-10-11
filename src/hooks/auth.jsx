@@ -6,21 +6,21 @@ export const AuthContext = createContext({})
 
 // eslint-disable-next-line react/prop-types
 function AuthProvider({ children }) {
-    const [data, setData] = useState({})
+    const [data, setData] = useState({}) //criado para guardar informacoes
 
     async function signIn({ email, password }) {
 
         try {
-            const response = await api.post("/sessions", { email, password });
+            const response = await api.post("/sessions", { email, password }); // Esta pegando o conteudo dessa requisicao
             const { user, token } = response.data;
 
             localStorage.setItem("@rocketnotes:user", JSON.stringify(user))
             localStorage.setItem("@rocketnotes:token", token)
 
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`
-            setData({ user, token })
+            setData({ user, token })//guardando token e user
 
-        } catch (error) {
+        } catch (error) { // tratamento de exception
             if (error.response) {
                 alert(error.response.data.message)
             } else {

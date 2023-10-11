@@ -1,10 +1,23 @@
-import { Link } from 'react-router-dom';
-import backGroundImage from '../assets/backgroundImage.png'
-import { Button } from "../components/Button";
-import { Input } from "../components/Input";
+import { useState } from 'react';
 import { FiMail, FiLock } from "react-icons/fi"
 
+import { Link } from 'react-router-dom';
+import backGroundImage from '../assets/backgroundImage.png'
+
+import { useAuth } from '../hooks/auth';
+
+import { Input } from "../components/Input";
+import { Button } from "../components/Button";
+
 export function SignIn() {
+  const [email, setEmail] = useAuth("")
+  const [password, setPassword] = useAuth("")
+
+  const { signIn } = useAuth
+
+  function handleSignIn() {
+    signIn({email, password})
+  }
   return (
     <div
       className="h-screen flex items-stretch"
@@ -22,14 +35,17 @@ export function SignIn() {
           placeholder="Email"
           type="text"
           icon={FiMail}
+          onChange={e => setEmail(e.target.value)}
         />
         <Input
           placeholder="Password"
           type="Password"
           icon={FiLock}
+          nChange={e => setPassword(e.target.value)}
         />
         <Button type="button"
           title="Enter"
+          onClick={handleSignIn}
         />
         <Link
           to="/register"
