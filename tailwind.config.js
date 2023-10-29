@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         pinklight: "#FF859B",
+        
         graylight: "#CAC4CF",
         graymedium: "#948F99",
         white: "#F4EDE8",

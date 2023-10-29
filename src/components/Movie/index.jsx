@@ -2,7 +2,7 @@ import { FiStar } from "react-icons/fi"
 import { Tag } from "../Tag"
 export function Movie() {
     return (
-        <button className="w-full p-8 mb-6 mr-3 flex flex-col gap-4 bg-pinklight opacity-5 rounded-3xl ">
+        <button className="w-full p-8 mb-6 mr-3 flex flex-col gap-4 bg-pinklight rounded-3xl bg-opacity-5 ">
             <div className="flex flex-col">
                 <article>
                     <h1 className="flex-1 text-2xl mb-3">InterEstellar</h1>

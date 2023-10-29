@@ -1,13 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import { Input } from "../Input";
+import { useAuth } from "../../hooks/auth";
 
 
 export function Header() {
-    function sair(event) {
-         event.stopPropagation()
-        console.log("sair")
-    }
-    function profile() {
-        console.log("profile")
+    const { signOut } = useAuth();
+    const navigate = useNavigate()
+
+    function handleSignOut(event) {
+        event.stopPropagation()
+        navigate("/")
+        signOut()
     }
     return (
         <header
@@ -21,14 +24,14 @@ export function Header() {
                     type="text"
                 />
             </div>
-            <div className="flex items-center" onClick={profile}>
+            <div className="flex items-center">
                 <div
                     className="flex flex-col mr-4 leading-6"
                 >
-                    <a href="#" onClick={profile} className="text-sm text-white font-bold">Weslley Oliveira</a>
-                    <a href="#" onClick={sair} className="text-sm text-graymedium text-right">Exit</a>
+                    <a href="#" className="text-sm text-white font-bold">Weslley Oliveira</a>
+                    <a href="#" onClick={handleSignOut} className="text-sm text-graymedium text-right">Exit</a>
                 </div>
-                <a href="#" onClick={profile}><img
+                <a href="/profile"><img
                     src="https://github.com/weslleyolli.png"
                     alt=""
                     className="w-14 h-14 rounded-full"
